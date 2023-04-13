@@ -2,7 +2,9 @@
 
 namespace portalium\bootstrap5;
 
-class Alert extends Widget
+use Yii;
+
+class Alert extends \yii\bootstrap5\Widget
 {
     
 }

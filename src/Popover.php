@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class Popover extends Widget
+class Popover extends \yii\bootstrap5\Popover
 {
 
 }

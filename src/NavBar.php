@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class NavBar extends Widget
+class NavBar extends \yii\bootstrap5\NavBar
 {
     
 }

@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class ButtonDropdown extends Widget
+class ButtonDropdown extends \yii\bootstrap5\ButtonDropdown
 {
 
 }

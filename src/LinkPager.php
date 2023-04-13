@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class LinkPager extends Widget
+class LinkPager extends \yii\bootstrap5\LinkPager
 {
     
 }

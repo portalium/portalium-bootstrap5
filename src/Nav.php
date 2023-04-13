@@ -7,7 +7,7 @@ use portalium\bootstrap5\Html;
 use portalium\bootstrap5\Widget;
 use yii\base\InvalidConfigException;
 
-class Nav extends Widget
+class Nav extends \yii\bootstrap5\Nav
 {
     public function renderItem($item): string
     {

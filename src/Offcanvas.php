@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class Offcanvas extends Widget
+class Offcanvas extends \yii\bootstrap5\Offcanvas
 {
 
 }
