@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class ButtonToolbar extends Widget
+class ButtonToolbar extends \yii\bootstrap5\ButtonToolbar
 {
     
 }

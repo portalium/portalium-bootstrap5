@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class Tabs extends Widget
+class Tabs extends \yii\bootstrap5\Tabs
 {
     public function init()
     {

@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class Toast extends Widget
+class Toast extends \yii\bootstrap5\Toast
 {
     
 }

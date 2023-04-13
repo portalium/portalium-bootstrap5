@@ -2,7 +2,7 @@
 
 namespace portalium\bootstrap5;
 
-class Modal extends Widget
+class Modal extends \yii\bootstrap5\Modal
 {
     
 }
