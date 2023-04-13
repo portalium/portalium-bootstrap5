@@ -1,6 +1,6 @@
 {
     "name": "portalium/portalium-bootstrap5",
-    "description": "The Portalium Bootstrap v5 extension for the Yii framework",
+    "description": "The Portalium Bootstrap v5 extension for the Portalium",
     "keywords": [
         "yii2",
         "bootstrap",
