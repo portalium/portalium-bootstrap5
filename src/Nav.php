@@ -52,12 +52,12 @@ class Nav extends \yii\bootstrap5\Nav
         if (!isset($item['icon']))
             return Html::tag('li', Html::a($label, $url, $linkOptions) . $items, $options);
         else
-            return Html::tag('li', $this->generateLabel($label, $url, $linkOptions, $item['icon']) . $items, $options);
+            return Html::tag('li', $this->generateLabel($label, $url, $linkOptions) . $items, $options);
     }
 
-    private function generateLabel($label, $url, $linkOptions, $icon){
+    private function generateLabel($label, $url, $linkOptions){
         //$aLabel = Html::tag('span', $label, ['class' => 'align-items-center d-flex']);
-        $label =  Html::a($icon.$label, $url, $linkOptions);
+        $label =  Html::a($label, $url, $linkOptions);
 
 
         return $label;
