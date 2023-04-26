@@ -49,6 +49,9 @@ class Nav extends \yii\bootstrap5\Nav
         } elseif ($this->activateItems && $active) {
             Html::addCssClass($linkOptions, ['activate' => 'active']);
         }
+        if (isset($item['displayType']))
+            $options['data-bs-type'] = $item['displayType'];
+
         if (!isset($item['icon']))
             return Html::tag('li', Html::a($label, $url, $linkOptions) . $items, $options);
         else
