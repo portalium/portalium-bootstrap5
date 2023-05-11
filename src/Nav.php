@@ -28,7 +28,7 @@ class Nav extends \yii\bootstrap5\Nav
 
         if (empty($items)) {
             $items = '';
-            Html::addCssClass($options, ['widget' => 'nav-item  me-3 me-lg-0']);
+            Html::addCssClass($options, ['widget' => 'nav-item me-lg-0']); //me-3 removed 11.05.2023
             Html::addCssClass($linkOptions, ['widget' => 'nav-link']);
         } else {
             $linkOptions['data']['bs-toggle'] = 'dropdown';
@@ -60,7 +60,7 @@ class Nav extends \yii\bootstrap5\Nav
 
     private function generateLabel($label, $url, $linkOptions, $icon){
         //$aLabel = Html::tag('span', $label, ['class' => 'align-items-center d-flex']);
-        $label =  Html::a($icon.$label, $url, $linkOptions);
+        $label =  Html::a($icon.'<span>'.$label.'</span>', $url, $linkOptions);
 
 
         return $label;
