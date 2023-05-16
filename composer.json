@@ -1,5 +1,5 @@
 {
-    "name": "portalium/portalium-bootstrap5",
+    "name": "portalium/yii2-bootstrap5",
     "description": "The Portalium Bootstrap v5 extension for the Portalium",
     "keywords": [
         "yii2",
@@ -9,7 +9,7 @@
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "support": {
-        "source": "https://github.com/portalium/portalium-bootstrap5"
+        "source": "https://github.com/portalium/yii2-bootstrap5"
     },
     "authors": [
         {
