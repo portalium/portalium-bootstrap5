@@ -75,6 +75,7 @@ class Panel extends Widget
         $this->_renderHeader();
 
         Html::addCssClass($this->bodyOptions, 'panel-body');
+        Html::addCssStyle($this->bodyOptions, 'overflow-x: auto;');
         echo Html::beginTag('div', $this->bodyOptions);
     }
 
