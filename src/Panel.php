@@ -95,16 +95,16 @@ class Panel extends Widget
      */
     private function _renderHeader()
     {
-        if (false !== $this->title)
-        {
+        if (false !== $this->title) {
             Html::addCssClass($this->headerOptions, 'panel-heading');
             Html::addCssStyle($this->headerOptions, 'overflow: auto;');
+            if (!isset($this->actions['footer']))
+                Html::addCssStyle($this->headerOptions, 'margin: 0px 5px;');
             echo Html::beginTag('div', $this->headerOptions);
 
             echo Html::beginTag('div', ['class' => $this->pushFontColor('panel-title')]);
 
-            if ($this->icon)
-            {
+            if ($this->icon) {
                 echo Html::tag('i', '', ['class' => $this->icon]);
             }
 
@@ -123,10 +123,12 @@ class Panel extends Widget
      */
     private function _renderFooter()
     {
-        if (false !== $this->footerContent)
-        {
+        if (false !== $this->footerContent) {
             Html::addCssClass($this->footerOptions, 'panel-footer');
             Html::addCssStyle($this->footerOptions, 'overflow: auto;');
+
+            if (!isset($this->actions['footer']))
+                Html::addCssStyle($this->footerOptions, 'display: none;');
 
             echo Html::beginTag('div', $this->footerOptions);
 
@@ -143,8 +145,7 @@ class Panel extends Widget
      */
     protected function getFontColor()
     {
-        if ($this->color)
-        {
+        if ($this->color) {
             return sprintf('font-%s', $this->color);
         }
 
@@ -158,8 +159,7 @@ class Panel extends Widget
     {
         $color = $this->getFontColor();
 
-        if ($color)
-        {
+        if ($color) {
             return sprintf('%s %s', $string, $color);
         }
 
@@ -171,20 +171,17 @@ class Panel extends Widget
      */
     private function _renderActions()
     {
-        if (!empty($this->actions))
-        {
-            if(isset($this->actions['header'])){
+        if (!empty($this->actions)) {
+            if (isset($this->actions['header'])) {
                 echo Html::tag('div', implode("\n", $this->actions['header']), ['class' => 'actions', 'style' => 'float:right;margin-top:-2px;']);
                 unset($this->actions['header']);
-            } else if(isset($this->actions['footer'])) {
+            } else if (isset($this->actions['footer'])) {
                 echo Html::tag('div', implode("\n", $this->actions['footer']), ['class' => 'actions', 'style' => 'float:right;margin-top:-2px;']);
                 unset($this->actions['footer']);
-            }else{
+            } else {
                 echo Html::tag('div', implode("\n", $this->actions), ['class' => 'actions', 'style' => 'float:right;margin-top:-2px;']);
                 unset($this->actions);
             }
         }
     }
-
-
 }
